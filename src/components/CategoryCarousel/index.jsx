@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { api } from '../../services/api';
-
+import { useNavigate } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import { Container, ContainerItems, Title } from './styles';
+import { Container, ContainerItems, Title, LinkCategory } from './styles';
 
 export const CategoryCarousel = () => {
+  const navigate = useNavigate();
+
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -48,7 +50,17 @@ export const CategoryCarousel = () => {
       >
         {categories.map((item) => (
           <ContainerItems key={item.id} imageUrl={item.url}>
-            <p>{item.name}</p>
+            <LinkCategory
+              key={item.id}
+              onClick={() =>
+                navigate({
+                  pathname: '/menu',
+                  search: `?categoria=${item.id}`,
+                })
+              }
+            >
+              {item.name}
+            </LinkCategory>
           </ContainerItems>
         ))}
       </Carousel>

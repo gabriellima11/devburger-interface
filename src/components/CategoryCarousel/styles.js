@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
 export const Container = styled.main`
     padding-left: 20px;
 
@@ -37,14 +39,19 @@ export const ContainerItems = styled.div`
     width: 100%;
     align-items: center;
     border-radius: 20px;
+`
 
-    p{
-        color: #fff;
-        font-size: 25px;
-        font-weight: 800;
-        background-color: rgba(0,0,0,0.5);
-        padding: 5px 20px;
-        border-radius: 30px;
-        margin: 100px 0 0 20px;
+export const LinkCategory = styled(Link)`
+    color: #fff;
+    font-size: 25px;
+    font-weight: 800;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px 20px;
+    border-radius: 30px;
+    margin: 100px 0 0 20px;
+    text-decoration: none;
+
+    &:hover{
+        background-color: #9758A6;
     }
 `

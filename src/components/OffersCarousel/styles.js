@@ -1,8 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    
+    overflow-x: hidden;
     margin-top: 50px;
+    margin-left: 80px;
+
+    .carousel-item{
+        padding-right: 40px;
+    }
+
+    .react-multi-carousel-list{
+        overflow: visible;
+    }
 `
 
 export const Title = styled.h1`
@@ -24,30 +33,3 @@ export const Title = styled.h1`
     }
 `
 
-export const ContainerItems = styled.div`
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    height: 250px;
-    border-radius: 30px;
-    box-shadow: 0px 4px 50px 0px #00000026;
-
-    img{
-        width: 180px;
-        height: 130px;
-    }
-
-    .name{
-        color: #FF8C05;
-        font-size: 22px;
-        font-weight: 700;
-    }
-
-    .price{
-        font-size: 22px;
-        font-weight: 700;
-    }
-
-`

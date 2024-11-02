@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { api } from '../../services/api';
-import { Container, Title, ContainerItems } from './styles';
-import { Button } from '../Button';
+import { Container, Title } from './styles';
+import { CardProduct } from '../CardProduct';
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -47,17 +47,7 @@ export const OffersCarousel = () => {
         itemClass="carousel-item"
       >
         {products.map(
-          (item) =>
-            item.offer && (
-              <ContainerItems key={item.id}>
-                <img src={item.url} />
-                <p className="name">{item.name}</p>
-                <p className="price">R${item.price}</p>
-                <Button>
-                  <i class="bi bi-cart-plus"></i>
-                </Button>
-              </ContainerItems>
-            ),
+          (item) => item.offer && <CardProduct key={item.id} item={item} />,
         )}
       </Carousel>
     </Container>
