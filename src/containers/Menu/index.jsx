@@ -46,7 +46,7 @@ export const Menu = () => {
 
   //Filtrar produtos conforme categoria
   useEffect(() => {
-    if (activeCategory === 0) {
+    if (JSON.parse(activeCategory) === 0) {
       setFilteredProducts(products);
     } else {
       const newFilteredProducts = products.filter(

@@ -4,11 +4,12 @@ import Background from '../../assets/background.svg'
 
 
 export const Banner = styled.div`
-    width: 100vw;
+    width: 100%;
     position: relative;
 
     img{
         width: 100%;
+        background-position: center;
     }
 
     h1{
@@ -25,8 +26,9 @@ export const Banner = styled.div`
 export const Container = styled.section`
     background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(${Background});
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     height: 100%;
+    padding-bottom: 50px;
 `
 
 export const Content = styled.div`

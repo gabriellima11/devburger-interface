@@ -4,6 +4,9 @@ import { Login } from '../containers/Login';
 import { Register } from '../containers/Register';
 import { Home } from '../containers/Home';
 import { Menu } from '../containers/Menu';
+import { Cart } from '../containers/Cart';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer/indes';
 
 export const router = createBrowserRouter([
   {
@@ -16,10 +19,32 @@ export const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <Home />,
+    element: (
+      <>
+        <Header />
+        <Home />
+        <Footer />
+      </>
+    ),
   },
   {
     path: '/menu',
-    element: <Menu />,
+    element: (
+      <>
+        <Header />
+        <Menu />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: '/carrinho',
+    element: (
+      <>
+        <Header />
+        <Cart />
+        {/* <Footer /> */}
+      </>
+    ),
   },
 ]);

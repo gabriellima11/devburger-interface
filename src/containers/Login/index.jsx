@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useUser } from '../../hooks/UserContext';
 
 //RouterDOM
 import { useNavigate } from 'react-router-dom';
@@ -31,6 +32,7 @@ import { Button } from '../../components/Button';
 
 export const Login = () => {
   const navigate = useNavigate();
+  const { putUserData } = useUser();
 
   const schema = yup
     .object({
@@ -70,7 +72,7 @@ export const Login = () => {
           },
         },
       );
-      localStorage.setItem('token', response.data.token);
+      putUserData(response.data);
     } catch (error) {
       toast.error('Email ou senha incorretos!');
     }
