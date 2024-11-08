@@ -1,5 +1,6 @@
 import { Container, Banner, Title, Content } from './styles';
 
+import { CartItems, CartResume } from '../../components';
 import Logo from '../../assets/logo.svg';
 
 export const Cart = () => {
@@ -9,7 +10,10 @@ export const Cart = () => {
         <img src={Logo} alt="logo" />
       </Banner>
       <Title>Checkout - Pedido</Title>
-      <Content></Content>
+      <Content>
+        <CartItems />
+        <CartResume />
+      </Content>
     </Container>
   );
 };

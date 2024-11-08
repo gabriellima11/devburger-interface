@@ -47,7 +47,8 @@ export const OffersCarousel = () => {
         itemClass="carousel-item"
       >
         {products.map(
-          (item) => item.offer && <CardProduct key={item.id} item={item} />,
+          (product) =>
+            product.offer && <CardProduct key={product.id} product={product} />,
         )}
       </Carousel>
     </Container>

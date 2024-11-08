@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import { useUser } from '../../hooks/UserContext';
 
 import {
@@ -10,12 +12,18 @@ import {
   Logout,
   Cart,
   CartLink,
+  CartBadge,
 } from './styles';
 import Logo from '../../assets/logo.svg';
 import ProfileImage from '../../assets/profile.svg';
 import CartImage from '../../assets/cart.svg';
+import { useCart } from '../../hooks/CartContext';
 
 export const Header = () => {
+  const navigate = useNavigate();
+
+  const { cartProducts } = useCart();
+
   const userData = useUser();
   const name = userData.userInfo.name;
 
@@ -43,7 +51,14 @@ export const Header = () => {
         </Profile>
         <Cart>
           <img src={CartImage} alt="carrinho" />
-          <CartLink to={'carrinho'}>Carrinho</CartLink>
+          <CartBadge>{cartProducts.length}</CartBadge>
+          <CartLink
+            onClick={() =>
+              navigate({ pathname: '/carrinho' }, { replace: true })
+            }
+          >
+            Carrinho
+          </CartLink>
         </Cart>
       </Options>
     </Container>

@@ -1,8 +1,7 @@
 import { Container, Banner, Content } from './style';
 
 import HomeBanner from '../../assets/banner-home.svg';
-import { CategoryCarousel } from '../../components/CategoryCarousel';
-import { OffersCarousel } from '../../components/OffersCarousel';
+import { CategoryCarousel, OffersCarousel } from '../../components';
 
 export const Home = () => {
   return (

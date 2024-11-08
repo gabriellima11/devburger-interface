@@ -69,6 +69,7 @@ export const Logout = styled(Link)`
 export const Cart = styled.div`
     display: flex;
     align-items: center;
+    position: relative;
 
     img{
         width: 40px;
@@ -85,3 +86,15 @@ export const CartLink = styled(Link)`
     }
 
 `
+
+export const CartBadge = styled.span`
+    position: absolute;
+    top: -10px;
+    right: 75px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+`;

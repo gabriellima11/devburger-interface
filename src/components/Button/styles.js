@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerButton = styled.button`
+    width: 100%;
     font-family: 'Road Rage', sans-serif;
     font-size: 30px;
     color: #fff;

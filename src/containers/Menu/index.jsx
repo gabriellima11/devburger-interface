@@ -96,7 +96,7 @@ export const Menu = () => {
 
       <ContainerItems>
         {filteredProducts.map((product) => (
-          <CardProduct key={product.id} item={product} />
+          <CardProduct key={product.id} product={product} />
         ))}
       </ContainerItems>
     </Container>
