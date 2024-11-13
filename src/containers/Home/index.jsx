@@ -1,9 +1,21 @@
 import { Container, Banner, Content } from './style';
 
+import { useNavigate } from 'react-router-dom';
 import HomeBanner from '../../assets/banner-home.svg';
 import { CategoryCarousel, OffersCarousel } from '../../components';
+import { useEffect } from 'react';
 
 export const Home = () => {
+  const navigate = useNavigate();
+  const token = userData && JSON.parse(userData).token;
+
+  useEffect(() => {
+    if (!token) {
+      navigate('/login');
+      return null;
+    }
+  }, []);
+
   return (
     <main>
       <Banner>
