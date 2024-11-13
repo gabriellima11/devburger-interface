@@ -19,6 +19,14 @@ import { CardProduct } from '../../components/CardProduct';
 export const Menu = () => {
   const navigate = useNavigate();
 
+  // Verifica se o usuário está autenticado
+  useEffect(() => {
+    const userData = localStorage.getItem('devburger:userData');
+    if (!userData) {
+      navigate('/login');
+    }
+  }, [navigate]);
+
   //Id da categoria clicada na Home
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search).get('categoria');
