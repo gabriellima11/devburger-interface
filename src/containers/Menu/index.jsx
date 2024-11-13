@@ -38,6 +38,7 @@ export const Menu = () => {
     async function loadProducts() {
       const { data } = await api.get('products');
       setProducts(data);
+      console.log(data);
     }
 
     loadCategories();

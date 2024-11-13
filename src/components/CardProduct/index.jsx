@@ -8,10 +8,6 @@ import PropTypes from 'prop-types';
 export const CardProduct = ({ product }) => {
   const { putProductInCart } = useCart();
 
-  function teste() {
-    console.log('a');
-  }
-
   return (
     <ContainerItems key={product.id}>
       <Image src={product.url} />

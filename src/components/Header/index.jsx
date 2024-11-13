@@ -13,8 +13,10 @@ import {
   Cart,
   CartLink,
   CartBadge,
+  AdminConfig,
 } from './styles';
 import Logo from '../../assets/logo.svg';
+import AdminConfigIcon from '../../assets/admin-config.svg';
 import ProfileImage from '../../assets/profile.svg';
 import CartImage from '../../assets/cart.svg';
 import { useCart } from '../../hooks/CartContext';
@@ -24,8 +26,9 @@ export const Header = () => {
 
   const { cartProducts } = useCart();
 
-  const userData = useUser();
-  const name = userData.userInfo.name;
+  const {
+    userInfo: { name, admin },
+  } = useUser();
 
   return (
     <Container>
@@ -60,6 +63,16 @@ export const Header = () => {
             Carrinho
           </CartLink>
         </Cart>
+        {admin == true && (
+          <AdminConfig
+            onClick={() =>
+              navigate({ pathname: '/pedidos' }, { replace: true })
+            }
+          >
+            <img src={AdminConfigIcon} alt="" />
+            Administração
+          </AdminConfig>
+        )}
       </Options>
     </Container>
   );

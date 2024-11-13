@@ -8,7 +8,9 @@ import {
   Cart,
   CompletePayment,
   Checkout,
+  Admin,
 } from '../containers';
+import paths from '../contants/paths';
 import { Header, Footer } from '../components';
 
 export const router = createBrowserRouter([
@@ -56,7 +58,7 @@ export const router = createBrowserRouter([
       <>
         <Header />
         <Checkout />
-        {/* <Footer /> */}
+        <Footer />
       </>
     ),
   },
@@ -66,6 +68,46 @@ export const router = createBrowserRouter([
       <>
         <Header />
         <CompletePayment />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: paths.Order,
+    element: (
+      <>
+        <Header />
+        <Admin />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: paths.Product,
+    element: (
+      <>
+        <Header />
+        <Admin />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: paths.EditProduct,
+    element: (
+      <>
+        <Header />
+        <Admin />
+        {/* <Footer /> */}
+      </>
+    ),
+  },
+  {
+    path: paths.NewProduct,
+    element: (
+      <>
+        <Header />
+        <Admin />
         {/* <Footer /> */}
       </>
     ),

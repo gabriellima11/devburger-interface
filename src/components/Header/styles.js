@@ -98,3 +98,19 @@ export const CartBadge = styled.span`
     font-size: 12px;
     font-weight: bold;
 `;
+
+export const AdminConfig = styled(Link)`
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff; 
+
+    &:hover{
+        color: #9758A6
+    }
+
+    img{
+        width: 40px;
+    }
+`;

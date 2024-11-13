@@ -36,6 +36,7 @@ export const ContainerItems = styled.div`
 `
 
 export const Image = styled.img`
+    width: 130px;
     position: absolute;
     top: -20%;
 `

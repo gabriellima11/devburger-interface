@@ -64,7 +64,7 @@ export const CartResume = () => {
           <p>{formatPrice(finalPrice + deliveryTax)}</p>
         </div>
       </Container>
-      <Button onClick={submitOrder}>Continuar</Button>
+      <Button onClick={submitOrder}>Continuar para o pagamento</Button>
     </div>
   );
 };
