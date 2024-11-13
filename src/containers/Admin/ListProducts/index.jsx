@@ -6,6 +6,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CancelIcon from '@mui/icons-material/Cancel';
 
 import paths from '../../../contants/paths';
 import { useNavigate } from 'react-router-dom';
@@ -57,8 +58,10 @@ export const ListProducts = () => {
                   </TableCell>
                   <TableCell>{formatPrice(prd.price)}</TableCell>
                   <TableCell align="center">
-                    {prd.offer && (
+                    {prd.offer ? (
                       <CheckCircleIcon style={{ color: '#228B22' }} />
+                    ) : (
+                      <CancelIcon style={{ color: '#9E1C00' }} />
                     )}
                   </TableCell>
                   <TableCell>
