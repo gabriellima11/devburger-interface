@@ -9,6 +9,7 @@ import {
   CompletePayment,
   Checkout,
   Admin,
+  Contact,
 } from '../containers';
 import paths from '../contants/paths';
 import { Header, Footer } from '../components';
@@ -39,6 +40,16 @@ export const router = createBrowserRouter([
         <Header />
         <Menu />
         <Footer />
+      </>
+    ),
+  },
+  {
+    path: '/contato',
+    element: (
+      <>
+        <Header />
+        <Contact />
+        {/* <Footer /> */}
       </>
     ),
   },

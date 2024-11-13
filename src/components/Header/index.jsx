@@ -37,7 +37,7 @@ export const Header = () => {
         <div>
           <HeaderLink to={'/'}>Home</HeaderLink>
           <HeaderLink to={'/menu?categoria=0'}>Cardápio</HeaderLink>
-          <HeaderLink href="">Contatos</HeaderLink>
+          <HeaderLink to={'/contato'}>Contatos</HeaderLink>
         </div>
       </Navigation>
       <Options>
