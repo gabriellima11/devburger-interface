@@ -37,5 +37,10 @@ ____
 <br/>
 
 # 📲Confira você mesmo:
-Utilizando o link você pode conferir como ficou o nosso site.
-<a href="https://devburger-interface-black.vercel.app/login" target="_blank">Clique aqui</a>
+Utilizando o link você pode conferir.
+
+### 📷Vídeo do projeto
+<a href="https://www.linkedin.com/posts/limaf-gabriel_projeto-finalizado-extremamente-activity-7262836561275219968-7k5B?utm_source=share&utm_medium=member_desktop" target="_blank">Clique aqui</a> para acessar a postagem
+
+### 💻Back-end
+<a href="https://github.com/gabriellima11/devburger-api" target="_blank">Clique aqui</a> para acessar o back-end
